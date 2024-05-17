@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: jellyfin
+id: bandito-jellyfin
 category: media
 name: Jellyfin
 version: "10.8.13"
