@@ -21,6 +21,6 @@ services:
       - ${UMBREL_ROOT}/data/storage/downloads:/downloads
     ports:
       # Service auto-discovery
-      - 7360:7360/udp
+      - 7359:7359/udp
     devices:
       - /dev/dri/renderD128:/dev/dri/renderD128
