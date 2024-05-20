@@ -4,7 +4,7 @@ category: media
 name: MeTube
 version: "2024-01-26"
 tagline: Download videos from YouTube
-icon: svgshare.com/i/16GR
+icon: svgshare.com/i/16GR.svg
 description: >-
   Download videos from YouTube (and dozens of other sites) directly to your Umbrel.
 developer: Alex Shnitman
