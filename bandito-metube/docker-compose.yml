@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: metube_metube_1
+      APP_HOST: bandito-metube_metube_1
       APP_PORT: 8081
 
   metube:
