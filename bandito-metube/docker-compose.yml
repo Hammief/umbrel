@@ -5,6 +5,7 @@ services:
     environment:
       APP_HOST: bandito-metube_metube_1
       APP_PORT: 8081
+      DELETE_FILE_ON_TRASHCAN: true
 
   metube:
     image: ghcr.io/alexta69/metube
