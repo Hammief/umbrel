@@ -1,26 +1,29 @@
-version: "3.7"
-
+version: "3.4"
 services:
-  app_proxy:
+  tdarr:
+    container_name: tdarr
+    image: ghcr.io/haveagitgat/tdarr:latest
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - 8265:8265 # webUI port
+      - 8266:8266 # server port
+      - 8267:8267 # Internal node port
+      - 8268:8268 # Example extra node port
     environment:
-      APP_HOST: bandito-jellyfin_server_1
-      APP_PORT: 8096
+      APP_HOST: bandito-tdarr_server_1
       PROXY_AUTH_ADD: "false"
-
-  server:
-    image: linuxserver/jellyfin:10.8.13@sha256:deb61ff251882fb21e5187b7d1988e84ea438626300041f7d9474a5dc0618e24
-    group_add:
-      - "105"
-    restart: on-failure
-    hostname: "${DEVICE_HOSTNAME}"
-    environment:
+      - TZ=America/New_York
       - PUID=1000
       - PGID=1000
+      - UMASK_SET=002
+      - serverIP=0.0.0.0
+      - serverPort=8266
+      - webUIPort=8265
+      - internalNode=true
+      - nodeID=MyInternalNode
+      
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${UMBREL_ROOT}/data/storage/downloads:/downloads
-    ports:
-      # Service auto-discovery
-      - 7359:7359/udp
     devices:
-      - /dev/dri/renderD128:/dev/dri/renderD128
