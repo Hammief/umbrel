@@ -9,8 +9,6 @@ services:
 
   server:
     image: ghcr.io/haveagitgat/tdarr:latest
-    group_add:
-      - "105"
     restart: unless-stopped
     network_mode: bridge
     hostname: "${DEVICE_HOSTNAME}"
