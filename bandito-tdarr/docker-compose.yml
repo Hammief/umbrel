@@ -30,8 +30,5 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${UMBREL_ROOT}/data/storage/downloads:/downloads
-    ports:
-      # Service auto-discovery
-      - 7359:7359/udp
     devices:
       - /dev/dri/renderD128:/dev/dri/renderD128
