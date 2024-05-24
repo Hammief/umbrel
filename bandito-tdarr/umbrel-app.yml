@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: bandito-tdarr
 category: media
-name: Jellyfin
+name: Tdarr
 version: "10.8.13"
 icon: https://svgur.com/i/16Qe.svg
 tagline: Tdarr V2: Distributed Remuxing System
