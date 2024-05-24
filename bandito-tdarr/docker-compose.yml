@@ -11,7 +11,7 @@ services:
       - 8267:8267 # Internal node port
       - 8268:8268 # Example extra node port
     environment:
-      APP_HOST: bandito-tdarr_server_1
+      APP_HOST: bandito_tdarr_server_1
       PROXY_AUTH_ADD: "false"
       - TZ=America/New_York
       - PUID=1000
