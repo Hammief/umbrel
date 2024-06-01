@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: bandito-hrconvert2_hrconvert2_1
+      APP_PORT: 8089
+      DELETE_FILE_ON_TRASHCAN: true
+
+  hrconvert2:
+    image: dwaaan/hrconvert2-docker:latest
+    restart: always
+    volumes:
+      - ${UMBREL_ROOT}/data/storage/downloads
