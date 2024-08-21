@@ -6,7 +6,7 @@ services:
       APP_HOST: bandito-jellyfin_server_1
       APP_PORT: 8096
       PROXY_AUTH_ADD: "false"
-      NV_PRIME_RENDER_OFFLOAD: 1
+      __NV_PRIME_RENDER_OFFLOAD: 1
 
   server:
     image: linuxserver/jellyfin:10.8.13@sha256:deb61ff251882fb21e5187b7d1988e84ea438626300041f7d9474a5dc0618e24
