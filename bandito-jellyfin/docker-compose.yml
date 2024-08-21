@@ -26,4 +26,3 @@ services:
       # Service auto-discovery
       - 7359:7359/udp
     devices:
-      driver: nvidia
